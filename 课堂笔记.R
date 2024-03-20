@@ -135,3 +135,33 @@ Array1<-array(data=c(unlist(df2),unlist(df2)),
               dim=c(5,2,2),
               dimnames = list(rownames(df2),colnames(df2)))
 Array1
+
+m1<-matrix(c(1:10),nrow=5,ncol=6)
+m1
+a_m1<-apply(m1, 2, sum)
+a_m1
+
+movies<-c('a','b','c','d')
+movies_lower<-lapply(movies, tolower)
+movies_lower
+str(movies_lower)
+
+emp.data<-data.frame(
+  name=c('roman','rafia','himanshu','jasmine','yash'),
+  salary=c(623.3,915.2,611.0,729.0,843.25),
+  start_data=as.Date(c("2012-01-01","2013-09-23","2014-09-23","2015-09-23","2016-09-23")),
+  dept=c('o','i','h','t','f'),
+  stringsAsFactors = FALSE
+)
+
+any(grepl("xlsx",install.packages("xlsx")))
+
+library("xlsx")
+library("rjava")
+write.xlsx(emp.data,file="data/empoyee.xlsx",
+           clo.names="true",row.names="true",sheetName="sheetname",
+           append=TRUE)
+library(rJava)
+library(xlsx)
+library(xlsxjars)
+library(lubridate)
