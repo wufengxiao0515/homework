@@ -119,7 +119,7 @@ dataframe_data=as.data.frame(matrix_data)#转化为数据框
 print(dataframe_data)
 class(dataframe_data)
 
-dataframe_data1<-data.frame(a=1:3,b=letters[10:12],
+df1<-data.frame(a=1:3,b=letters[10:12],
                             c=seq(as.Date("2004-01-01"),by="week",length.out=3),
                             stringsAsFactors = TRUE)
 dataframe_data1
@@ -127,3 +127,11 @@ class(dataframe_data1)
 matrix_data1<-data.matrix(dataframe_data1[1:2])
 matrix_data1
 class(matrix_data1)
+
+df2<-data.frame(x=11:15,y=15:11)
+df2
+
+Array1<-array(data=c(unlist(df2),unlist(df2)),
+              dim=c(5,2,2),
+              dimnames = list(rownames(df2),colnames(df2)))
+Array1
