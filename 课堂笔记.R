@@ -177,3 +177,9 @@ library('xlsx')
 library(packagefinder)
 
 library(tidyverse)
+library(xlsx)
+surveys_complete<-read.xlsx("D://吴凤箫//homework//os_forest.xlsx",1)
+library(ggplot2)
+ggplot(data = surveys_complete, aes(x = Science, y = Social.Studies
+)) + geom_point()
+
