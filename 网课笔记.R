@@ -59,3 +59,8 @@ days<-enddate-startdate
 today<-Sys.Date()
 dob<-as.Date("1956-10-12")
 difftime(today,dob,units="weeks")
+
+a<-c(1,2,3)
+is.numeric(a)
+is.vector(a)
+a<-as.character(a)
