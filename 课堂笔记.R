@@ -183,3 +183,16 @@ library(ggplot2)
 ggplot(data = surveys_complete, aes(x = Science, y = Social.Studies
 )) + geom_point()
 
+class<-as.factor(c(0,0,0,0,0,1,1,1,1,1))
+x1<-c(4,4.5,5,5.5,3,5.6,6,6.5,6.2,5.9)
+x2<-c(9,10,11,10,9,8,7,8,7,8)
+df<-cbind.data.frame(class,x1,x2)
+
+plot(x1,x2,col="white")
+points(x1[class=="0"],x2[class=="0"],col="blue",pch=19)
+points(x1[class=="1"],x2[class=="1"],col="red",pch=19)
+
+predictor1test<-seq(from=3,to=7,by=0.1)
+length(predictor1test)
+predictor2test<-seq(from=7,to=11,by=0.1)
+length(predictor2test)
