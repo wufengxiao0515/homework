@@ -1,13 +1,14 @@
 # 以下为第3章代码
 # 第1节代码
 x <- rnorm(50)
-mean(x)
-sd(x)
-var(x)
-median(x)
-quantile(x)
+x
+mean(x)#均数
+sd(x)#标准差
+var(x)#方差
+median(x)#中位数
+quantile(x)#分位数
 
-pvec <- seq(0,1,0.1)
+pvec <- seq(0,1,0.1)#把0~1十等分
 pvec
 quantile(x,pvec)
 
